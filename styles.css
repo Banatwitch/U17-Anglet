@@ -1,0 +1,114 @@
+/*C:/Lucas/site hockey/img/decock.jpg*/
+body {
+	background-image: url('C:/Lucas/site hockey/img/decock.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+header {
+  background-color: #ff0101;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+h1 {
+  margin: 0;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
+
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
+}
+
+section:last-of-type {
+  width: 100%;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+article {
+  margin-bottom: 20px;
+}
+
+article h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #ff0101;
+}
+
+article p {
+  margin: 0;
+  color: #099b00;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  /*border: 1px solid #ddd;*/
+}
+
+th {
+  background-color: #099b00;
+  color: #fff;
+}
+
+/*tr:nth-child(even) {
+
+}*/
+
+
+footer {
+  background-color: #099b00;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
