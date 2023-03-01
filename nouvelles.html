@@ -1,0 +1,66 @@
+<!-- nouvelle-annonce.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nouvelle annonce - Site de vente</title>
+  <link rel="stylesheet" href="css/styles4.css">
+</head>
+<body>
+  <header>
+    <a href="#">Site de vente</a>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="rechercher.html">Rechercher</a></li>
+      <li><a href="#">Se connecter</a></li>
+    </ul>
+  </header>
+  <main>
+    <h1>Nouvelle annonce</h1>
+    <form>
+      <label for="titre">Titre :</label>
+      <input type="text" id="titre" name="titre">
+      <label for="description">Description :</label>
+      <textarea id="description" name="description"></textarea>
+      <label for="prix">Prix :</label>
+      <input type="text" id="prix" name="prix">
+      <button type="submit">Publier</button>
+    </form>
+  </main>
+  // nouvelle-annonce.html
+<form id="form-annonce">
+  <!-- Les champs du formulaire ici -->
+  <button type="submit">Publier</button>
+</form>
+
+<script>
+const formAnnonce = document.getElementById("form-annonce");
+
+formAnnonce.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const titre = formAnnonce.elements.titre.value;
+  const description = formAnnonce.elements.description.value;
+  const prix = formAnnonce.elements.prix.value;
+
+  const annonce = { titre, description, prix };
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "/annonces");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onload = () => {
+    if (xhr.status === 201) {
+      console.log("Annonce publiée avec succès");
+    } else {
+      console.error("Erreur lors de la publication de l'annonce");
+    }
+  };
+  xhr.send(JSON.stringify(annonce));
+});
+</script>
+  <footer>
+    Copyright &copy; Site de vente
+  </footer>
+ 
+</body>
+</html>
